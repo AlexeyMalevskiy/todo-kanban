@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do Лист (Канбан)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+  <header class="header">
+    <h1>Мои задачи</h1>
+    <button id="theme-toggle" class="theme-toggle" title="Сменить тему">🌙</button>
+  </header>
+
+  <main class="board">
+    <!-- Форма добавления -->
+    <div class="add-task-form">
+      <input id="task-input" type="text" placeholder="Что нужно сделать?" />
+      <button id="add-btn">Добавить</button>
+    </div>
+
+    <!-- Колонки -->
+    <div class="columns">
+      <!-- В планах -->
+      <div class="column" data-status="todo">
+        <h2>📋 В планах</h2>
+        <div class="task-list" id="todo-list"></div>
+      </div>
+
+      <!-- В работе -->
+      <div class="column" data-status="inprogress">
+        <h2>⚡ В работе</h2>
+        <div class="task-list" id="inprogress-list"></div>
+      </div>
+
+      <!-- Сделано -->
+      <div class="column" data-status="done">
+        <h2>✅ Сделано</h2>
+        <div class="task-list" id="done-list"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
