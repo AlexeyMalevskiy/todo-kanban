@@ -12,7 +12,42 @@
     <h1>Мои задачи</h1>
     <button id="theme-toggle" class="theme-toggle" title="Сменить тему">🌙</button>
   </header>
+  <!-- Кнопка вызова справки -->
+  <button id="help-btn" class="help-btn" title="Как пользоваться?">?</button>
 
+  <!-- Панель справки (изначально скрыта) -->
+  <div id="help-panel" class="help-panel hidden">
+    <div class="help-content">
+      <h2>📖 Как пользоваться</h2>
+      
+      <div class="help-item">
+        <strong>➕ Добавить задачу</strong>
+        <p>Введите текст в поле сверху и нажмите кнопку «Добавить» (или клавишу Enter). Новая задача появится в колонке «В планах».</p>
+      </div>
+
+      <div class="help-item">
+        <strong>🖱️ Перетаскивание (на ПК)</strong>
+        <p>Зажмите задачу левой кнопкой мыши и перетащите её в нужную колонку («В работе» или «Сделано»).</p>
+      </div>
+
+      <div class="help-item">
+        <strong>📱 Перетаскивание (на телефоне)</strong>
+        <p>Зажмите карточку пальцем и тяните её в нужную колонку, затем отпустите.</p>
+      </div>
+
+      <div class="help-item">
+        <strong>🗑️ Удалить задачу</strong>
+        <p>Нажмите на красный крестик (×) на карточке задачи, чтобы удалить её.</p>
+      </div>
+
+      <div class="help-item">
+        <strong>💾 Сохранение</strong>
+        <p>Все ваши задачи и выбранная тема автоматически сохраняются в браузере. Вы можете закрыть страницу и вернуться позже — всё останется на месте.</p>
+      </div>
+
+      <button id="close-help" class="close-help">Понятно!</button>
+    </div>
+  </div>
   <main class="board">
     <!-- Форма добавления -->
     <div class="add-task-form">

@@ -180,3 +180,37 @@ themeToggle.addEventListener("click", () => {
 
 // --- Старт программы ---
 renderTasks();
+
+// --- 6. Логика работы справки ---
+const helpBtn = document.getElementById("help-btn");
+const helpPanel = document.getElementById("help-panel");
+const closeHelpBtn = document.getElementById("close-help");
+
+// Открыть справку
+helpBtn.addEventListener("click", () => {
+  helpPanel.classList.remove("hidden");
+  // Небольшая задержка, чтобы анимация сработала корректно
+  setTimeout(() => {
+    helpPanel.style.transform = "translateX(0)";
+  }, 10);
+});
+
+// Закрыть справку
+function closeHelp() {
+  helpPanel.style.transform = "translateX(100%)";
+  setTimeout(() => {
+    helpPanel.classList.add("hidden");
+  }, 300); // Ждем окончания анимации (0.3s)
+}
+
+closeHelpBtn.addEventListener("click", closeHelp);
+
+// Закрытие по клику вне панели (на затемненном фоне)
+document.addEventListener("click", (e) => {
+  // Если панель открыта и клик был не по панели и не по кнопке открытия
+  if (!helpPanel.classList.contains("hidden") && 
+      !helpPanel.contains(e.target) && 
+      e.target !== helpBtn) {
+    closeHelp();
+  }
+});
